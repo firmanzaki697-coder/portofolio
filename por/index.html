@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaki Firmansah | Portofolio PKL XI RPLB</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#fff7f2',
+                            100: '#f7e9df',
+                            500: '#b77d57',
+                            600: '#9d6543',
+                            700: '#7f4f35',
+                            900: '#3d2b24',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-white text-stone-900 font-sans antialiased selection:bg-stone-200 selection:text-stone-900 transition-colors duration-300">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-stone-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#home" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-xl bg-stone-900 flex items-center justify-center text-white font-bold text-xl shadow-sm">
+                        ZF
+                    </div>
+                    <div>
+                        <span class="font-bold text-lg tracking-tight text-stone-900">Zaki Firmansah</span>
+                        <span class="block text-xs text-stone-600 font-medium">XI RPLB - Software Engineer</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <div class="hidden md:flex items-center gap-8 text-sm font-medium text-stone-700">
+                    <a href="#home" class="hover:text-stone-900 transition-colors">Beranda</a>
+                    <a href="#about" class="hover:text-stone-900 transition-colors">Tentang Saya</a>
+                    <a href="#skills" class="hover:text-stone-900 transition-colors">Keahlian</a>
+                    <a href="#projects" class="hover:text-stone-900 transition-colors">Projek</a>
+                    <a href="#contact" class="hover:text-stone-900 transition-colors">Kontak</a>
+                </div>
+
+                <!-- Right Actions -->
+                <div class="hidden md:flex items-center gap-4">
+                    <a href="#contact" class="px-5 py-2.5 rounded-xl bg-stone-900 text-white font-semibold text-sm shadow-sm transition-all hover:scale-[1.01] flex items-center gap-2">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <span>Hire Me / PKL</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="flex md:hidden items-center gap-3">
+                    <button id="mobile-menu-btn" class="p-2 rounded-lg bg-white border border-stone-200 text-stone-700 hover:text-brand-700 focus:outline-none shadow-sm">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 border-b border-stone-200 px-6 py-6 space-y-4 backdrop-blur-xl">
+            <a href="#home" class="block text-stone-700 hover:text-brand-700 font-medium mobile-link">Beranda</a>
+            <a href="#about" class="block text-stone-700 hover:text-brand-700 font-medium mobile-link">Tentang Saya</a>
+            <a href="#skills" class="block text-stone-700 hover:text-brand-700 font-medium mobile-link">Keahlian</a>
+            <a href="#projects" class="block text-stone-700 hover:text-brand-700 font-medium mobile-link">Projek</a>
+            <a href="#contact" class="block text-stone-700 hover:text-brand-700 font-medium mobile-link">Kontak</a>
+            <div class="pt-4 border-t border-stone-200 flex flex-col gap-3">
+                <a href="#contact" class="w-full py-3 rounded-xl bg-brand-600 text-white font-semibold text-center shadow-lg shadow-brand-600/20 flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <span>Hire Me / PKL</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center pt-24 pb-16 overflow-hidden">
+        <!-- Background Glow Accents -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-indigo-600/15 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-[350px] h-[350px] bg-cyan-500/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full text-center">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-stone-200 text-stone-700 text-xs sm:text-sm font-semibold mb-6 shadow-sm">
+                <i class="fa-solid fa-graduation-cap text-stone-700"></i>
+                <span>Siswa Kelas XI RPLB (Rekayasa Perangkat Lunak)</span>
+            </div>
+
+            <h1 class="max-w-5xl mx-auto text-4xl sm:text-6xl lg:text-[5.2rem] font-extrabold tracking-[-0.06em] mb-6 leading-[0.96] text-stone-900">
+                Halo, Saya <span class="text-stone-900">Zaki Firmansah</span>
+            </h1>
+
+            <p class="hero-subtitle text-lg sm:text-2xl text-stone-700 mx-auto mb-10">
+                Saya seorang calon Web Developer & Software Engineer yang fokus pada <span id="typing-text" class="text-stone-900 font-semibold typing-cursor"></span>
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#projects" class="btn-ripple w-full sm:w-auto px-8 py-4 rounded-2xl bg-stone-900 text-white font-bold shadow-sm transition-all hover:scale-[1.01] flex items-center justify-center gap-3">
+                    <i class="fa-solid fa-code"></i>
+                    <span>Lihat Portofolio Projek</span>
+                </a>
+                <a href="#contact" class="btn-ripple w-full sm:w-auto px-8 py-4 rounded-2xl bg-white text-stone-900 border border-stone-200 font-bold transition-all hover:scale-[1.01] flex items-center justify-center gap-3">
+                    <i class="fa-solid fa-briefcase text-stone-800"></i>
+                    <span>Tawaran PKL / Magang</span>
+                </a>
+            </div>
+
+            <p id="hero-status" class="mt-6 text-sm text-slate-400 max-w-xl mx-auto">Siap belajar, beradaptasi, dan membangun produk nyata.</p>
+
+            <div class="mt-8 flex flex-wrap items-center justify-center gap-2 max-w-5xl mx-auto">
+                <button id="quick-copy-email" class="quick-action" type="button">Copy Email</button>
+                <button id="quick-copy-wa" class="quick-action" type="button">Copy WhatsApp</button>
+                <button id="quick-focus" class="quick-action" type="button">Focus Mode</button>
+                <button id="quick-quote" class="quick-action" type="button">Quote Baru</button>
+                <button id="quick-project" class="quick-action" type="button">Highlight Project</button>
+                <button id="quick-contact" class="quick-action" type="button">Kontak</button>
+                <button id="quick-top" class="quick-action" type="button">Ke Atas</button>
+                <button id="quick-burst" class="quick-action" type="button">Burst Effect</button>
+                <button id="quick-skill" class="quick-action" type="button">Skill Spotlight</button>
+            </div>
+
+            <div class="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-4xl mx-auto">
+                <div class="stat-card rounded-2xl border border-white/10 bg-white/5 p-4 shadow-sm backdrop-blur-sm" data-tilt>
+                    <div class="text-3xl font-black" data-count="2">0</div>
+                    <div class="text-sm text-slate-600 mt-1">Projek Utama</div>
+                </div>
+                <div class="stat-card rounded-2xl border border-white/10 bg-white/5 p-4 shadow-sm backdrop-blur-sm" data-tilt>
+                    <div class="text-3xl font-black" data-count="6">0</div>
+                    <div class="text-sm text-slate-600 mt-1">Teknologi</div>
+                </div>
+                <div class="stat-card rounded-2xl border border-white/10 bg-white/5 p-4 shadow-sm backdrop-blur-sm" data-tilt>
+                    <div class="text-3xl font-black" data-count="100">0</div>
+                    <div class="text-sm text-slate-600 mt-1">% Semangat</div>
+                </div>
+            </div>
+
+            <!-- Tech Badges Quick Row -->
+            <div class="mt-16 pt-12 border-t border-slate-900 grid grid-cols-3 sm:grid-cols-6 gap-6 max-w-4xl mx-auto text-slate-400">
+                <div class="flex flex-col items-center gap-2 p-3 rounded-xl bg-slate-900/50 border border-slate-800/60 hover:border-indigo-500/40 transition-colors">
+                    <i class="fa-brands fa-html5 text-3xl text-orange-500"></i>
+                    <span class="text-xs font-medium">HTML5</span>
+                </div>
+                <div class="flex flex-col items-center gap-2 p-3 rounded-xl bg-slate-900/50 border border-slate-800/60 hover:border-indigo-500/40 transition-colors">
+                    <i class="fa-brands fa-css3-alt text-3xl text-blue-500"></i>
+                    <span class="text-xs font-medium">CSS3</span>
+                </div>
+                <div class="flex flex-col items-center gap-2 p-3 rounded-xl bg-slate-900/50 border border-slate-800/60 hover:border-indigo-500/40 transition-colors">
+                    <i class="fa-brands fa-js text-3xl text-yellow-400"></i>
+                    <span class="text-xs font-medium">JavaScript</span>
+                </div>
+                <div class="flex flex-col items-center gap-2 p-3 rounded-xl bg-slate-900/50 border border-slate-800/60 hover:border-indigo-500/40 transition-colors">
+                    <i class="fa-brands fa-php text-3xl text-indigo-400"></i>
+                    <span class="text-xs font-medium">PHP</span>
+                </div>
+                <div class="flex flex-col items-center gap-2 p-3 rounded-xl bg-slate-900/50 border border-slate-800/60 hover:border-indigo-500/40 transition-colors">
+                    <i class="fa-brands fa-laravel text-3xl text-red-500"></i>
+                    <span class="text-xs font-medium">Laravel</span>
+                </div>
+                <div class="flex flex-col items-center gap-2 p-3 rounded-xl bg-slate-900/50 border border-slate-800/60 hover:border-indigo-500/40 transition-colors">
+                    <i class="fa-brands fa-java text-3xl text-cyan-400"></i>
+                    <span class="text-xs font-medium">Java</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-24 bg-slate-900/40 border-t border-slate-900 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-indigo-400 mb-3">Tentang Saya</h2>
+                <h3 class="text-3xl sm:text-4xl font-extrabold">Mengenal Zaki Lebih Dekat</h3>
+                <p class="text-slate-400 mt-4">Siswa SMK jurusan Rekayasa Perangkat Lunak yang memiliki dedikasi tinggi dalam pengembangan web dan pemrograman berorientasi objek.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Avatar / Card Info -->
+                <div class="lg:col-span-5">
+                    <div class="relative group">
+                        <div class="absolute -inset-1 bg-gradient-to-r from-indigo-600 to-cyan-500 rounded-3xl blur-lg opacity-30 group-hover:opacity-60 transition duration-500"></div>
+                        <div class="relative bg-slate-900 border border-slate-800 rounded-3xl p-8 text-center shadow-2xl">
+                            <div class="profile-frame mx-auto mb-6">
+                                <img src="./WhatsApp Image 2026-10-17 at 21.52.57.jpeg" alt="Zaki Firmansah" class="profile-photo" loading="lazy">
+                            </div>
+                            <h4 class="text-2xl font-bold mb-1">Zaki Firmansah</h4>
+                            <p class="text-indigo-400 font-medium text-sm mb-4">XI RPLB - Rekayasa Perangkat Lunak</p>
+                            <p class="text-slate-400 text-sm mb-6">Siap menjalani Praktik Kerja Lapangan (PKL) untuk mengaplikasikan ilmu dan berkontribusi langsung pada proyek industri.</p>
+                            <div class="flex justify-center gap-3">
+                                <a href="https://github.com" target="_blank" class="w-10 h-10 rounded-xl bg-slate-800 hover:bg-indigo-600 text-slate-300 hover:text-white flex items-center justify-center transition-colors">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                                <a href="https://linkedin.com" target="_blank" class="w-10 h-10 rounded-xl bg-slate-800 hover:bg-indigo-600 text-slate-300 hover:text-white flex items-center justify-center transition-colors">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                                <button id="copy-email-btn" type="button" class="w-10 h-10 rounded-xl bg-slate-800 hover:bg-indigo-600 text-slate-300 hover:text-white flex items-center justify-center transition-colors" aria-label="Salin email">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bio & Details -->
+                <div class="lg:col-span-7 space-y-6">
+                    <h4 class="text-2xl font-bold">Halo! Saya Zaki, pengembang software masa depan.</h4>
+                    <p class="text-slate-300 leading-relaxed">
+                        Saat ini saya duduk di bangku kelas <span class="text-indigo-400 font-semibold">XI Rekayasa Perangkat Lunak (RPLB)</span>. Selama bersekolah, saya telah mempelajari berbagai teknologi pengembangan perangkat lunak, mulai dari perancangan antarmuka web yang responsif hingga pengelolaan database dan backend menggunakan PHP, Laravel, serta Java.
+                    </p>
+                    <p class="text-slate-400 leading-relaxed">
+                        Saya sangat antusias untuk mencari pengalaman dunia kerja nyata melalui program <span class="text-indigo-400 font-semibold">PKL (Praktik Kerja Lapangan)</span>. Saya cepat belajar, terbiasa bekerja dalam tim, dan siap menyelesaikan tantangan coding yang diberikan.
+                    </p>
+
+                    <!-- Quick Info Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+                        <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800 flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-indigo-600/20 text-indigo-400 flex items-center justify-center text-xl font-bold">
+                                <i class="fa-solid fa-school"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs text-slate-400">Jurusan</span>
+                                <span class="font-semibold text-sm">Rekayasa Perangkat Lunak</span>
+                            </div>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800 flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-cyan-600/20 text-cyan-400 flex items-center justify-center text-xl font-bold">
+                                <i class="fa-solid fa-certificate"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs text-slate-400">Status PKL</span>
+                                <span class="font-semibold text-sm text-cyan-400">Mencari Tempat PKL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-indigo-400 mb-3">Keahlian & Teknologi</h2>
+                <h3 class="text-3xl sm:text-4xl font-extrabold">Tech Stack yang Dikuasai</h3>
+                <p class="text-slate-400 mt-4">Teknologi dan bahasa pemrograman yang saya pelajari dan gunakan dalam pembuatan proyek aplikasi.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Skill Card 1: HTML & CSS -->
+                <div class="skill-card p-6 rounded-3xl bg-slate-900/50 border border-slate-800 hover:border-indigo-500/50 transition-all hover:-translate-y-1 group" data-skill="HTML5 & CSS3">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-14 h-14 rounded-2xl bg-orange-500/10 text-orange-500 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                            <i class="fa-brands fa-html5"></i>
+                        </div>
+                        <span class="text-xs font-semibold px-3 py-1 rounded-full bg-slate-800 text-slate-300">Advanced</span>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">HTML5 & CSS3</h4>
+                    <p class="text-slate-400 text-sm mb-4">Membangun struktur markup semantik serta styling modern menggunakan Tailwind CSS dan Flexbox/Grid.</p>
+                    <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                        <div class="bg-gradient-to-r from-orange-500 to-amber-500 h-full rounded-full" style="width: 90%;"></div>
+                    </div>
+                </div>
+
+                <!-- Skill Card 2: JavaScript -->
+                <div class="skill-card p-6 rounded-3xl bg-slate-900/50 border border-slate-800 hover:border-indigo-500/50 transition-all hover:-translate-y-1 group" data-skill="JavaScript">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-14 h-14 rounded-2xl bg-yellow-500/10 text-yellow-400 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                            <i class="fa-brands fa-js"></i>
+                        </div>
+                        <span class="text-xs font-semibold px-3 py-1 rounded-full bg-slate-800 text-slate-300">Intermediate</span>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">JavaScript</h4>
+                    <p class="text-slate-400 text-sm mb-4">Membuat website interaktif, manipulasi DOM, AJAX, event handling, dan logika pemrograman dinamis.</p>
+                    <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                        <div class="bg-yellow-400 h-full rounded-full" style="width: 80%;"></div>
+                    </div>
+                </div>
+
+                <!-- Skill Card 3: PHP -->
+                <div class="skill-card p-6 rounded-3xl bg-slate-900/50 border border-slate-800 hover:border-indigo-500/50 transition-all hover:-translate-y-1 group" data-skill="PHP & MySQL">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-14 h-14 rounded-2xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                            <i class="fa-brands fa-php"></i>
+                        </div>
+                        <span class="text-xs font-semibold px-3 py-1 rounded-full bg-slate-800 text-slate-300">Intermediate</span>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">PHP & MySQL</h4>
+                    <p class="text-slate-400 text-sm mb-4">Pengembangan backend berbasis server-side scripting dan integrasi database relasional MySQL.</p>
+                    <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                        <div class="bg-indigo-500 h-full rounded-full" style="width: 85%;"></div>
+                    </div>
+                </div>
+
+                <!-- Skill Card 4: Laravel -->
+                <div class="skill-card p-6 rounded-3xl bg-slate-900/50 border border-slate-800 hover:border-indigo-500/50 transition-all hover:-translate-y-1 group" data-skill="Laravel Framework">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-14 h-14 rounded-2xl bg-red-500/10 text-red-500 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                            <i class="fa-brands fa-laravel"></i>
+                        </div>
+                        <span class="text-xs font-semibold px-3 py-1 rounded-full bg-slate-800 text-slate-300">Intermediate</span>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Laravel Framework</h4>
+                    <p class="text-slate-400 text-sm mb-4">Membangun aplikasi web MVC yang aman, routing, Eloquent ORM, dan manajemen autentikasi.</p>
+                    <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                        <div class="bg-red-500 h-full rounded-full" style="width: 75%;"></div>
+                    </div>
+                </div>
+
+                <!-- Skill Card 5: Java -->
+                <div class="skill-card p-6 rounded-3xl bg-slate-900/50 border border-slate-800 hover:border-indigo-500/50 transition-all hover:-translate-y-1 group" data-skill="Java Programming">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-14 h-14 rounded-2xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                            <i class="fa-brands fa-java"></i>
+                        </div>
+                        <span class="text-xs font-semibold px-3 py-1 rounded-full bg-slate-800 text-slate-300">Intermediate</span>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Java Programming</h4>
+                    <p class="text-slate-400 text-sm mb-4">Konsep Pemrograman Berorientasi Objek (OOP), struktur data dasar, dan logika algoritma.</p>
+                    <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                        <div class="bg-cyan-500 h-full rounded-full" style="width: 70%;"></div>
+                    </div>
+                </div>
+
+                <!-- Skill Card 6: Database & Tools -->
+                <div class="skill-card p-6 rounded-3xl bg-slate-900/50 border border-slate-800 hover:border-indigo-500/50 transition-all hover:-translate-y-1 group" data-skill="Git & Database">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-14 h-14 rounded-2xl bg-purple-500/10 text-purple-400 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-database"></i>
+                        </div>
+                        <span class="text-xs font-semibold px-3 py-1 rounded-full bg-slate-800 text-slate-300">Tools</span>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Git & Database</h4>
+                    <p class="text-slate-400 text-sm mb-4">Version control dengan Git/GitHub serta manajemen query database SQL yang efisien.</p>
+                    <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                        <div class="bg-purple-500 h-full rounded-full" style="width: 80%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 bg-slate-900/40 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-indigo-400 mb-3">Portofolio Projek</h2>
+                <h3 class="text-3xl sm:text-4xl font-extrabold">Hasil Karya & Tugas Pemrograman</h3>
+                <p class="text-slate-400 mt-4">Beberapa projek web dan aplikasi yang pernah saya buat selama belajar di jurusan RPLB.</p>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="project-grid">
+                <article class="project-card rounded-3xl bg-slate-900 border border-slate-800 overflow-hidden group hover:border-indigo-500/50 transition-all duration-300" data-category="php" data-tilt>
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="./WhatsApp Image 2026-10-17 at 22.26.07.jpeg" alt="Booking Futsal" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-900/10 to-transparent"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="text-xs font-semibold px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400">PHP</span>
+                            <span class="text-xs font-semibold px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-400">MySQL</span>
+                        </div>
+                        <h4 class="text-xl font-bold mb-2 group-hover:text-indigo-400 transition-colors">Booking Futsal</h4>
+                        <p class="text-slate-400 text-sm mb-6">Sistem booking lapangan futsal yang mencakup proses pemesanan, validasi data, dan manajemen jadwal secara sederhana namun rapi.</p>
+                        <div class="flex items-center justify-between pt-4 border-t border-slate-800">
+                            <span class="text-xs text-slate-500">Proyek 1</span>
+                            <a href="#contact" class="text-sm font-semibold text-indigo-400 hover:text-indigo-300 flex items-center gap-1">
+                                <span>Detail</span>
+                                <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card rounded-3xl bg-slate-900 border border-slate-800 overflow-hidden group hover:border-indigo-500/50 transition-all duration-300" data-category="web" data-tilt>
+                    <div class="h-56 overflow-hidden relative bg-gradient-to-br from-amber-900/70 via-slate-800 to-indigo-900">
+                        <div class="absolute inset-0 p-6 flex items-end justify-start">
+                            <div class="relative z-10 bg-white/10 border border-white/15 backdrop-blur-sm rounded-2xl px-4 py-3 shadow-lg">
+                                <div class="text-[10px] uppercase tracking-[0.2em] text-amber-200">Portfolio</div>
+                                <div class="text-lg font-bold text-white mt-1">Zaki Firmansah</div>
+                            </div>
+                        </div>
+                        <div class="absolute inset-x-6 inset-y-8 rounded-2xl border border-white/15 bg-slate-950/40 shadow-2xl"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="text-xs font-semibold px-3 py-1 rounded-full bg-orange-500/10 text-orange-400">HTML</span>
+                            <span class="text-xs font-semibold px-3 py-1 rounded-full bg-yellow-500/10 text-yellow-400">CSS</span>
+                            <span class="text-xs font-semibold px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-400">JS</span>
+                        </div>
+                        <h4 class="text-xl font-bold mb-2 group-hover:text-indigo-400 transition-colors">Portofolio Saya</h4>
+                        <p class="text-slate-400 text-sm mb-6">Website portofolio pribadi yang menampilkan profil, kemampuan, dan proyek secara rapi dengan tampilan formal dan profesional.</p>
+                        <div class="flex items-center justify-between pt-4 border-t border-slate-800">
+                            <span class="text-xs text-slate-500">Proyek 2</span>
+                            <a href="#home" class="text-sm font-semibold text-indigo-400 hover:text-indigo-300 flex items-center gap-1">
+                                <span>Detail</span>
+                                <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience & Journey Section -->
+    <section id="journey" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-indigo-400 mb-3">Perjalanan & Proses</h2>
+                <h3 class="text-3xl sm:text-4xl font-extrabold">Bagaimana Saya Belajar dan Berkembang</h3>
+                <p class="text-slate-400 mt-4">Saya terus melatih kemampuan diri melalui eksplorasi teknologi, proyek mandiri, dan pendekatan yang terstruktur dalam memecahkan masalah.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 mb-16">
+                <div class="mini-stat reveal">
+                    <div class="mini-stat-number">120+</div>
+                    <div class="mini-stat-label">Jam Belajar</div>
+                </div>
+                <div class="mini-stat reveal">
+                    <div class="mini-stat-number">18</div>
+                    <div class="mini-stat-label">Modul Dipelajari</div>
+                </div>
+                <div class="mini-stat reveal">
+                    <div class="mini-stat-number">7</div>
+                    <div class="mini-stat-label">Proyek Uji Coba</div>
+                </div>
+                <div class="mini-stat reveal">
+                    <div class="mini-stat-number">99%</div>
+                    <div class="mini-stat-label">Semangat Belajar</div>
+                </div>
+            </div>
+
+            <div class="journey-stream reveal">
+                <div class="journey-item">
+                    <div class="journey-card">
+                        <span class="journey-year">2024</span>
+                        <h4>Awal saya mulai eksplorasi web</h4>
+                        <p>Saya mulai memahami HTML, CSS, dan JavaScript dasar dengan belajar lewat praktik sederhana, mulai dari landing page sampai halaman interaktif yang lebih rapi.</p>
+                    </div>
+                </div>
+                <div class="journey-item">
+                    <div class="journey-card">
+                        <span class="journey-year">2025</span>
+                        <h4>Belajar backend dan logika aplikasi</h4>
+                        <p>Di tahap ini saya mulai masuk ke PHP dan MySQL, fokus pada logika, pengolahan data, dan cara membuat sistem yang lebih terstruktur.</p>
+                    </div>
+                </div>
+                <div class="journey-item">
+                    <div class="journey-card">
+                        <span class="journey-year">2025</span>
+                        <h4>Menjelajahi Laravel dan workflow profesional</h4>
+                        <p>Saya mulai belajar MVC, routing, Eloquent, blade templates, dan autentikasi agar lebih siap membuat aplikasi yang lebih kompleks dan rapi.</p>
+                    </div>
+                </div>
+                <div class="journey-item">
+                    <div class="journey-card">
+                        <span class="journey-year">Now</span>
+                        <h4>Sedang mempersiapkan diri untuk PKL</h4>
+                        <p>Saat ini saya fokus menyiapkan portofolio, memperkuat kemampuan, dan siap beradaptasi di lingkungan kerja yang lebih nyata dan profesional.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Highlights -->
+    <section class="py-24 bg-slate-900/30 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="feature-panel reveal">
+                    <div class="panel-head">
+                        <div class="panel-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                        <div>
+                            <span class="eyebrow">Keunggulan</span>
+                            <h4>Gaya kerja yang analitis dan konsisten</h4>
+                        </div>
+                    </div>
+                    <div class="feature-copy">
+                        <p>Berpikir secara sistematis dalam membangun solusi dari masalah yang kompleks.</p>
+                        <p>Menggunakan pendekatan yang terstruktur, mulai dari perencanaan hingga eksekusi.</p>
+                        <p>Siap bekerja dalam tim dan mengikuti arahan proyek dengan profesional serta tetap terbuka belajar.</p>
+                    </div>
+                </div>
+
+                <div class="feature-panel reveal">
+                    <div class="panel-head">
+                        <div class="panel-icon alt"><i class="fa-solid fa-rocket"></i></div>
+                        <div>
+                            <span class="eyebrow">Prioritas</span>
+                            <h4>Target saya dalam PKL</h4>
+                        </div>
+                    </div>
+                    <div class="feature-copy">
+                        <p>Mendapatkan pengalaman nyata di lingkungan kerja yang profesional dan menantang.</p>
+                        <p>Mengasah kemampuan coding, kolaborasi, serta manajemen tugas dengan lebih matang.</p>
+                        <p>Mempelajari alur kerja industri yang lebih terstruktur dan berkontribusi pada proyek yang bermanfaat.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial / Motivation -->
+    <section class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-5xl mx-auto mb-14">
+                <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-[#a06d48] mb-3">Motivasi</h2>
+                <h3 class="text-4xl sm:text-5xl font-extrabold tracking-[-0.06em] text-stone-900">Apa yang membuat saya terus bergerak maju</h3>
+            </div>
+
+            <div class="swiper-shell reveal max-w-6xl mx-auto">
+                <div id="testimonial-track" class="testimonial-track">
+                    <article class="testimonial-card active">
+                        <div class="quote-mark">“</div>
+                        <p>Belajar programming bukan sekadar menulis kode, tetapi melatih logika, disiplin, dan kemampuan menyelesaikan masalah dengan cara yang tepat.</p>
+                        <div class="person-meta">
+                            <div class="avatar-dot">Z</div>
+                            <div>
+                                <strong>Zaki Firmansah</strong>
+                                <span>Student Developer</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="testimonial-card">
+                        <div class="quote-mark">“</div>
+                        <p>Setiap proyek kecil adalah bekal untuk membangun kemampuan besar. Konsistensi jauh lebih penting daripada seberapa cepat orang bisa mulai.</p>
+                        <div class="person-meta">
+                            <div class="avatar-dot">F</div>
+                            <div>
+                                <strong>Focus & Growth</strong>
+                                <span>Mindset</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="testimonial-card">
+                        <div class="quote-mark">“</div>
+                        <p>Ketika saya menghadapi kesulitan, saya belajar bukan untuk menyerah, tetapi mengubah hambatan menjadi bahan evaluasi dan perbaikan.</p>
+                        <div class="person-meta">
+                            <div class="avatar-dot">P</div>
+                            <div>
+                                <strong>Problem Solving</strong>
+                                <span>Core Skill</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-24 border-t border-stone-200 bg-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-4xl mx-auto mb-14">
+                <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-[#a06d48] mb-3">FAQ</h2>
+                <h3 class="text-4xl sm:text-6xl font-extrabold tracking-[-0.06em] text-stone-900">Pertanyaan umum</h3>
+            </div>
+
+            <div class="faq-list">
+                <div class="faq-item reveal active">
+                    <button class="faq-question" type="button">
+                        <span>Apa alasan saya memilih fokus di web development?</span>
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Karena web development adalah bidang yang sangat relevan, terus berkembang, dan punya ruang besar untuk berkreasi serta memberi solusi nyata kepada pengguna.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question" type="button">
+                        <span>Apakah saya sudah siap untuk PKL?</span>
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Saya siap belajar, beradaptasi, dan memberikan kontribusi terbaik. Yang saya butuhkan adalah kesempatan untuk belajar di lingkungan kerja nyata.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question" type="button">
+                        <span>Teknologi apa yang paling saya kuasai?</span>
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>HTML, CSS, JavaScript, PHP, MySQL, dan Laravel adalah fokus utama yang sedang saya kembangkan dengan konsisten dan terarah.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question" type="button">
+                        <span>Bagaimana cara saya bekerja?</span>
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Saya bekerja dengan disiplin, mengikuti target, mempelajari kebutuhan, serta menyelesaikan tugas dengan pendekatan yang rapi dan terukur.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & CV Section -->
+    <section id="contact" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <!-- Info Column -->
+                <div class="lg:col-span-5 space-y-6">
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-indigo-400">Hubungi Saya</h2>
+                    <h3 class="text-3xl sm:text-4xl font-extrabold">Tertarik Menerima Saya untuk PKL?</h3>
+                    <p class="text-slate-400 leading-relaxed">
+                        Saya sangat antusias untuk bergabung di perusahaan atau instansi Anda. Silakan hubungi saya melalui form di samping atau download CV lengkap saya di bawah ini.
+                    </p>
+
+                    <div class="space-y-4 pt-4">
+                        <div class="flex items-center gap-4 p-4 rounded-2xl bg-slate-900 border border-slate-800">
+                            <div class="w-12 h-12 rounded-xl bg-indigo-600/20 text-indigo-400 flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs text-slate-400">Email</span>
+                                <span class="font-semibold text-sm">zakifirmansah@example.com</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 p-4 rounded-2xl bg-slate-900 border border-slate-800">
+                            <div class="w-12 h-12 rounded-xl bg-green-600/20 text-green-400 flex items-center justify-center text-xl">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs text-slate-400">WhatsApp</span>
+                                <span class="font-semibold text-sm">+62 812-3456-7890</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Download CV Button -->
+                    <div class="pt-4 space-y-3">
+                        <button id="download-cv-btn" class="w-full py-4 rounded-2xl bg-gradient-to-r from-indigo-600 to-cyan-500 hover:from-indigo-500 hover:to-cyan-400 text-white font-bold shadow-xl shadow-indigo-600/30 transition-all hover:scale-[1.02] flex items-center justify-center gap-3">
+                            <i class="fa-solid fa-download"></i>
+                            <span>Download Kurikulum Vitae (CV)</span>
+                        </button>
+                        <button id="copy-all-contact" class="w-full py-3 rounded-2xl border border-slate-700 bg-slate-900/60 text-slate-100 font-semibold transition-all hover:border-indigo-500 hover:bg-slate-800 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-copy"></i>
+                            <span>Salin Semua Kontak</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Form Column -->
+                <div class="lg:col-span-7">
+                    <div class="p-8 sm:p-10 rounded-3xl bg-slate-900 border border-slate-800 shadow-2xl relative">
+                        <h4 class="text-2xl font-bold mb-6">Kirim Pesan / Tawaran PKL</h4>
+                        <form id="contact-form" class="space-y-6">
+                            <div>
+                                <label class="block text-sm font-medium text-slate-300 mb-2">Nama Lengkap / Perusahaan</label>
+                                <input type="text" id="name" required class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-slate-100 focus:outline-none focus:border-indigo-500 transition-colors" placeholder="Masukkan nama Anda">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-slate-300 mb-2">Email</label>
+                                <input type="email" id="email" required class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-slate-100 focus:outline-none focus:border-indigo-500 transition-colors" placeholder="nama@email.com">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-slate-300 mb-2">Pesan / Penawaran PKL</label>
+                                <textarea id="message" rows="4" required class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-slate-100 focus:outline-none focus:border-indigo-500 transition-colors" placeholder="Tuliskan detail tawaran atau pesan..."></textarea>
+                            </div>
+                            <button type="submit" class="w-full py-4 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold transition-all shadow-lg shadow-indigo-600/30 flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-paper-plane"></i>
+                                <span>Kirim Pesan</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-slate-950 border-t border-slate-900 text-center text-slate-500 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p>&copy; <span id="current-year"></span> Zaki Firmansah (XI RPLB). All rights reserved. Built with passion & dedication.</p>
+        </div>
+    </footer>
+
+
+    <!-- Custom Notification Toast Modal (No alert) -->
+    <div id="scroll-progress" class="fixed top-0 left-0 h-1 z-[60] bg-gradient-to-r from-orange-400 via-amber-300 to-cyan-400 shadow-lg"></div>
+    <button id="back-to-top" type="button" class="fixed bottom-24 right-6 z-50 hidden items-center justify-center w-12 h-12 rounded-full bg-white text-slate-800 shadow-xl border border-slate-200 hover:scale-105 transition-all">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-32 opacity-0 transition-all duration-300 bg-slate-900 border border-indigo-500/50 text-white px-6 py-4 rounded-2xl shadow-2xl flex items-center gap-3">
+        <div id="toast-icon" class="text-indigo-400 text-xl"></div>
+        <div>
+            <h5 id="toast-title" class="font-bold text-sm"></h5>
+            <p id="toast-desc" class="text-xs text-slate-400"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
